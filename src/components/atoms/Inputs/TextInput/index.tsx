@@ -14,12 +14,12 @@ export const TextInput = React.forwardRef<HTMLInputElement, InputProps>(
 
     return (
       <>
-        <div>
-          <input type="text" {...rest} ref={ref} />
+        <div className="flex flex-col">
+          <input type="text" {...rest} ref={ref} className="rounded-md" />
           {(caption || label) && (
-            <div>
+            <div className="flex flex-row justify-between text-sm text-gray">
               <span>{label}</span>
-              <span>{caption}</span>
+              <span className="text-gray-500">{caption}</span>
             </div>
           )}
         </div>
