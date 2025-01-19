@@ -14,7 +14,7 @@ export const CheckBox = React.forwardRef<HTMLInputElement, InputProps>(
     const { label, value, defaultChecked, ...rest } = props;
     return (
       <>
-        <div>
+        <div className="flex items-center gap-1">
           <input
             id={value ? `${rest.name}_${value}` : rest.name}
             type="checkbox"
